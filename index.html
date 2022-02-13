@@ -40,7 +40,7 @@
                             <div class="calc-button-row">
                                 <div class="button">&lt;</div>
                                 <div class="button" onclick="display('0')">0</div>
-                                <div class="button">C</div>
+                                <div class="button" id="clear">C</div>
                             </div>
                             <div>
                                 <button type="submit" id="submit" class="submit-btn">Submit</button>
@@ -52,8 +52,8 @@
             
         </div>
         <div class="notify-section">
-            <p id="notify1">❌ Pin Didn't Match, Please try again</p>
-            <p id="notify2">✅ Pin Matched... Secret door is opening for you</p>
+            <p id="notify-not-match">❌ Pin Didn't Match, Please try again</p>
+            <p id="notify-match">✅ Pin Matched... Secret door is opening for you</p>
     </div>
     <script src="pin.js"></script>
 </body>

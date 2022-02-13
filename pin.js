@@ -6,25 +6,29 @@ document.getElementById("generate-number").value = randomNumber;
 function display(value) {
    document.getElementById("generatePin").value+=value;
 }
-
-//is match or not match
+//clear button 
+document.getElementById("clear").addEventListener("click", function() {
+   document.getElementById("generatePin").value = '';
+})
+// varify pin 
 
 document.getElementById("submit").addEventListener("click", function() {
-const match = document.getElementById("generatePin").value;
-const matchNumber = parseFloat(match);
-const inputNumber= document.getElementById("generate-number").value;
-const parseInputNumber = parseFloat(inputNumber);
-if(matchNumber == parseInputNumber) {
-     
-   const notifySection1 = document.getElementById("notify1");
-   notifySection1.classList.add('d-none');
+const inputForMatch = document.getElementById("generatePin").value;
+const matchNumber = parseFloat(inputForMatch);
+const generatePinValue= document.getElementById("generate-number").value;
+const generatePinNumber = parseFloat(generatePinValue);
 
-   const notifySection2 = document.getElementById("notify2");
-   notifySection2.style.display = "block";
+const notifyMatch = document.getElementById("notify-match");
+const notifyNotMatch = document.getElementById("notify-not-match");
+
+if(matchNumber == generatePinNumber) {
+   
+   notifyMatch.style.display = "block";
+   notifyNotMatch.style.display = "none";
 }
 else{
-     const notifySection1 = document.getElementById("notify1");
-     notifySection1.style.display = "block";
+     notifyMatch.style.display = "none";
+     notifyNotMatch.style.display = "block";
 }
 })
 

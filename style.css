@@ -102,7 +102,7 @@ color: #E0B612;
     background: #495BC3;
     color: #fff;
 }
-#notify1 {
+#notify-match {
     display:none;
     color: #fff;
     text-align: center;
@@ -112,7 +112,7 @@ color: #E0B612;
     border-radius: 15px;
     padding: 5px 20px;
 }
-#notify2 {
+#notify-not-match {
     display:none;
     color: #fff;
     text-align: center;
